@@ -1,12 +1,24 @@
 package regexmatch;
 
-public class Regexmatch {
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Regexmatch 
+{
+    public static Boolean isTrue(String str)
+    {
+        return str.matches(".*false.*");
     }
-    
+
+    public static void main(String[] args) throws FileNotFoundException 
+    {
+        System.out.println(isTrue("True"));
+        System.out.println(containsFalse("jhflasehqsd"));
+        Scanner sc = new Scanner(new FileReader("input.txt"));
+    }
+
+    private static boolean containsFalse(String _) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
